@@ -14,6 +14,12 @@
     Alias /static/dashboard/css/ <%= @horizon_dir %>/static/dashboard/css/
     Alias /static <%= @horizon_dir %>/openstack_dashboard/static
 
+    <Location /static/>
+        SetOutputFilter DEFLATE
+        ExpiresActive On
+        ExpiresDefault A604800
+    </Location>
+
     <Directory />
         Options FollowSymLinks
         AllowOverride None
