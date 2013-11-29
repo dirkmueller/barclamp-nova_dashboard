@@ -20,6 +20,7 @@ ALLOWED_HOSTS = ['*']
 # settings to better secure the cookies from security exploits
 <%= @use_ssl ? '' : '# ' %>CSRF_COOKIE_SECURE = True
 <%= @use_ssl ? '' : '# ' %>SESSION_COOKIE_SECURE = True
+<%= @use_ssl ? '' : '# ' %>SESSION_COOKIE_HTTPONLY = True
 
 # Default OpenStack Dashboard configuration.
 HORIZON_CONFIG = {
